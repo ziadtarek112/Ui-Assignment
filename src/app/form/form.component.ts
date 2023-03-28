@@ -27,10 +27,11 @@ export class FormComponent {
     state : this.state,
     orderTotal : this.orderTotal
   }
+  console.log(userObj);
 
 
     this.user.AddUsers(userObj)
-   
+
 
   }
 

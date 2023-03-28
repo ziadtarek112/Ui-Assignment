@@ -1,5 +1,28 @@
 .card{
 
-  background-color: bisque;
-  
+  background-color: rgb(1, 0, 59);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  padding: 10px 150px;
+  color: white;
+  width: fit-content;
+  margin-inline: auto;
+}
+input {
+  display: block;
+  margin: 10px 10px;
+  width: 400px;
+
+}
+
+button {
+  background-color:rgb(73, 71, 222);
+  color: white;
+  padding: 10px;
+}
+p{
+  color: red;
+
 }

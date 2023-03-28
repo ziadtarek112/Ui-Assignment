@@ -13,8 +13,10 @@ export class TableComponent implements OnInit {
 
   }
   ngOnInit(): void {
-    this.user.data$.subscribe(val => {
-      this.users=JSON.stringify(val)
+    this.user.filteredUsers.subscribe((val:any) => {
+      this.users=val
+      console.log(this.users);
+
 
     })
   }

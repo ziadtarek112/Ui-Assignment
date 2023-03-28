@@ -1,16 +1,23 @@
-
-
-<label >first Name</label>
-<input [(ngModel)]="firstName" type="text">
-<label >last Name</label>
-<input [(ngModel)]="lastName" type="text">
-<label >address</label>
-<input [(ngModel)]="address" type="text">
-<label >City</label>
-<input [(ngModel)]="city" type="text">
-<label >State</label>
-<input [(ngModel)]="state" type="text">
-<label >order total</label>
-<input [(ngModel)]="orderTotal" type="text">
-<button (click)="onClick()">Submit</button>
-
+<div class="card">
+  <form action="" #form="ngForm" form id="myForm" (ngSubmit)="onClick()">
+    <label>first Name</label>
+    <input [(ngModel)]="firstName" name="firstName" type="text" required minlength="4" #firstNamee="ngModel">
+    <p *ngIf="firstNamee.invalid && (firstNamee.dirty || firstNamee.touched)">Name is not Valid</p>
+    <label>last Name</label>
+    <input [(ngModel)]="lastName"name="lastName" type="text" required minlength="4" #lastNamee="ngModel">
+    <p *ngIf="lastNamee.invalid && (lastNamee.dirty || lastNamee.touched)">Name is not Valid</p>
+    <label>address</label>
+    <input [(ngModel)]="address" name="address" type="text" required minlength="4" #addresss="ngModel">
+    <p *ngIf="addresss.invalid && (addresss.dirty || addresss.touched)">Name is not Valid</p>
+    <label>City</label>
+    <input [(ngModel)]="city" name="city" type="text" required minlength="4" #cityy = "ngModel">
+    <p *ngIf="cityy.invalid && (cityy.dirty || cityy.touched)">Name is not Valid</p>
+    <label>State</label>
+    <input [(ngModel)]="state" name = "state" type="text" required minlength="4" #statee = "ngModel">
+    <p *ngIf="statee.invalid && (statee.dirty || statee.touched)">Name is not Valid</p>
+    <label>order total</label>
+    <input [(ngModel)]="orderTotal" name="orderTotal" type="text" required minlength="4" #orderTotall = "ngModel">
+    <p *ngIf="orderTotall.invalid && (orderTotall.dirty || orderTotall.touched)">Name is not Valid</p>
+    <input value="Add User" type="submit" [disabled]="form.invalid"/>
+  </form>
+</div>

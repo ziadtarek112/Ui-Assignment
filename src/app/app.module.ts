@@ -6,17 +6,19 @@ import { AppComponent } from './app.component';
 import { FormComponent } from './form/form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TableComponent } from './table/table.component';
+import { FilterComponent } from './filter/filter.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FormComponent,
     TableComponent,
+    FilterComponent,
 
   ],
   imports: [
     BrowserModule,
-    FormsModule
+  FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
